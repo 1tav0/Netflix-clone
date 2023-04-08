@@ -1,0 +1,29 @@
+.navbar{
+    position: fixed; /*always sticks to the top*/
+    top: 0;
+    width: 100%; /* the space between adds the space from corner to corner of the logos but we must add this width because it normally doesnt work with positin fixed */
+    padding: 20px; /*padding from top edge in */
+    height: 30px; /* the height of the logo above is this */
+    z-index:1; /* since this is a header aka always at the top we add a z index of 1 */
+    /* display: flex; makes the two logos be on the same row instead of horizontal
+    justify-content: space-between; */
+    /* animations to add black navbar on top when past 100px */
+    transition-timing-function: ease-in; /*for all transition changes aka tv sizes how u wanna handle them ? ease them in */
+    transition: all 0.5s; /*whether or not tv size changes so this adapts it */
+}
+.nav__black{
+    background-color: #111;
+}
+.nav__logo{
+    position: fixed; /*since logos are always on the left corner we fix is position to the left */
+    left: 20px; /* will move in from left edge 20px works like padding */
+    width: 80px; /*shrinks the size of the netflix logo from side to side */
+    object-fit: contain /*contains the actual picture in that size */
+}
+
+.nav__avatar{
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    object-fit: contain;
+}

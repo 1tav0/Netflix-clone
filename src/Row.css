@@ -1,0 +1,38 @@
+.row{
+    color: white; /*the color of the movie category changes to white */
+    margin-left: 20px; /* left edge more inside*/
+}
+.row__posters{
+    display: flex; /* with flex box it will display rows of posters instead of column of posters */
+    overflow-y: hidden;/* to scroll the row but on the y-axis here we hide the y scroll */
+    overflow-x: scroll; /* we need x axis scroll to move the posters in the row*/
+    padding: 20px;/* after adding scroll hovering over the posters kind of crops the poster so we add this to avoid that */
+    /* if we transform our component we will need to add padding to it */
+}
+
+/* hide the scrollbar but keep the functionality of it */
+.row__posters::-webkit-scrollbar{
+    display: none; 
+}
+
+.row__poster{
+    object-fit: contain; /* keeps the aspect ratio regardless of the screen size */
+    width: 100%; 
+    max-height: 100px; /* normal row max height */
+    margin-right: 10px;/* to add space in between posters in the row */
+    transition: transform 450ms/* if we ever making a change add a few milliseconds of transition */
+
+}
+
+.row__poster:hover{
+    transform: scale(1.08);/* when we hover over poster the poster kinda grows a bit, works with the transitons delay */
+
+}
+
+.row_posterLarge{ /* will make the rop row larger*/
+    max-height: 250px;
+}
+
+.row_posterLarge:hover{
+    transform: scale(1.09); /* slightly bigger hover */
+}
