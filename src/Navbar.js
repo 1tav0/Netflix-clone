@@ -30,7 +30,7 @@ const Navbar = () => {
               alt='Netflix Avatar'
           />
         
-    </div>
+      </div>
   )
 }
 
